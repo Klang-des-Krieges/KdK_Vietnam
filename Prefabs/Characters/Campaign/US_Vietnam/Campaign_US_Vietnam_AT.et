@@ -1,0 +1,54 @@
+SCR_ChimeraCharacter : "{9F4976C06FD1C839}Prefabs/Characters/Campaign/Final/BLUFOR/US_army/Regular/Campaign_US_Player_LAT.et" {
+ ID "6A14E00000000002"
+ components {
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{AA89E7DF69A3CF6C}Prefabs/Weapons/Rifles/ARY_M16_US/Worn/ARY_Rifle_M16A1_Worn.et"
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{BBACFAFEB62BB486}Prefabs/Characters/Headgear/Hat_Boonie/PE_Hat_Boonie_OG.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{93AEF1623167A697}Prefabs/Characters/Uniforms/Jacket_M65/Base/PE_Jacket_M65_Rolled_Deploy.et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+     Enabled 0
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{1064E12EE6F25478}Prefabs/Characters/Uniforms/Pants_M65/PE_Pants_M65.et"
+    }
+    LoadoutSlotInfo Boots {
+    }
+    LoadoutSlotInfo Vest {
+     Prefab "{156DC7109CEE6F69}Prefabs/Characters/Vests/Vest_ALICE/Variants/Vest_ALICE_AR.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{5D7CAAFB9235E902}" {
+     TargetStorage "Jacket/PE_Jacket_M65_Rolled_Deploy.et"
+     PrefabsToSpawn {
+      "{61D4F80E49BF9B12}Prefabs/Items/Equipment/Compass/Compass_SY183.et" "{922F95F91943F69A}Prefabs/Items/Equipment/Maps/Map_Paper_01/PaperMap_01_folded_US.et" "{A81F501D3EF6F38E}Prefabs/Items/Medicine/FieldDressing_01/FieldDressing_US_01.et" "{A81F501D3EF6F38E}Prefabs/Items/Medicine/FieldDressing_01/FieldDressing_US_01.et" "{0D9A5DCF89AE7AA9}Prefabs/Items/Medicine/MorphineInjection_01/MorphineInjection_01.et" "{6E35D94130954509}Prefabs/Items/Equipment/Accessories/ETool_ALICE/ETool_ALICE_FreeRoamBuilding_Gadget.et"
+     }
+    }
+    ItemsInitConfigurationItem "{5D7CAAFB9235E903}" {
+     TargetStorage "Jacket/PE_Jacket_M65_Rolled_Deploy.et"
+    }
+    ItemsInitConfigurationItem "{54A49B42D138207E}" {
+     TargetStorage "Pants/PE_Pants_M65.et"
+     PrefabsToSpawn {
+      "{D8F2CA92583B23D3}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_30rnd_M855_M856_Last_5Tracer.et" "{73950FBA2D7DB5C5}Prefabs/Items/Equipment/Radios/Radio_ANPRC68.et"
+     }
+    }
+    ItemsInitConfigurationItem "{5538C040738A83D1}" {
+     TargetStorage "Pants/PE_Pants_M65.et"
+    }
+    ItemsInitConfigurationItem "{5538C040737C0BE0}" {
+     TargetStorage "Pants/PE_Pants_M65.et"
+    }
+   }
+  }
+ }
+}

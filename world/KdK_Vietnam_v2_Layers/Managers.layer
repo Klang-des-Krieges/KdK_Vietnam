@@ -1,0 +1,56 @@
+SCR_AIWorld SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
+ components {
+  NavmeshWorldComponent "{5584F30E67F617AD}" {
+   NavmeshSettings NavmeshWorld "{50FC63BEBE3973C5}" {
+    NavmeshFilesConfig BaseNavmeshFilesConfig "{6A18FB3E104CAE4A}" {
+     NavmeshFile "{4C5DC23B33285CBA}Navmesh/Soldiers.nmn"
+    }
+   }
+  }
+  NavmeshWorldComponent "{5584F30EEFEE1223}" {
+   NavmeshSettings ChimeraNavmeshWorld "{50FC63BEBE3973C5}" {
+    NavmeshFilesConfig BaseNavmeshFilesConfig "{60CA9BE5536BF701}" {
+     NavmeshFile "{6957D1DE8462E9A0}Navmesh/BTRlike.nmn"
+    }
+   }
+  }
+  NavmeshWorldComponent "{5C8C9B750D124A63}" {
+   NavmeshSettings NavmeshWorld "{5C8C9B750B60C6E2}" {
+    NavmeshFilesConfig BaseNavmeshFilesConfig "{5C90BD0EC793647D}" {
+     NavmeshFile "{0C645FF0DA66996D}Navmesh/LowRes.nmn"
+    }
+   }
+  }
+ }
+ coords 4164.943 48.121 4231.111
+ {
+  CommentEntity {
+   coords 0 1 0
+   m_Comment "SCR_AIWorld: "\
+   "Configure navigation mesh"
+   m_Color 0 0 0
+   m_FaceCamera 1
+   m_TextBackground 1
+   m_BackgroundColor 1 0.6 0
+   m_BackgroundTransparency 0
+  }
+ }
+}
+PerceptionManager PerceptionManager : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 4164.943 47.221 4230.111
+}
+SCR_CampaignFactionManager CampaignFactionManager : "{130806924CFFDA55}Prefabs/MP/Campaign/CampaignFactionManager.et" {
+ coords 624.498 79.228 616.54
+}
+SCR_GameModeCampaign GameMode_CampaignHQC1 : "{2AFDAA8D7947F559}Prefabs/MP/Modes/Conflict/GameMode_CampaignHQC.et" {
+ coords 4154.169 76.405 4250.169
+}
+ScriptedChatEntity : "{536D80EB494DDC43}Prefabs/MP/Campaign/CampaignMPChatEntity.et" {
+ coords 4155.8 79.589 4259.102
+}
+RadioManagerEntity : "{B8E09FAB91C4ECCD}Prefabs/Systems/Radio/RadioManager.et" {
+ coords 4166.593 75.865 4267.966
+}
+SCR_LoadoutManager CampaignLoadoutManager : "{58FBD035E53D95C2}Prefabs/MP/Campaign/CampaignLoadoutManager.et" {
+ coords 647.923 75.626 640.196
+}

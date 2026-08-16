@@ -1,0 +1,17 @@
+SCR_ChimeraCharacter : "{918C557BF3506286}Prefabs/Characters/Campaign/Final/Campaign_USSR_Base.et" {
+ ID "6A14D0C0A1B2C301"
+ components {
+  SCR_CampaignBuildingComponent "{6A14920697F5693D}" {
+  }
+  SCR_CharacterFactionAffiliationComponent "{520EC9618276DF23}" {
+   "faction affiliation" "USSR"
+  }
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_VariantData SCR_EditableEntityVariantData "{60F6B83ED4C13CC3}" {
+    m_bRandomizeDefaultVariant 0
+    m_aVariants {
+    }
+   }
+  }
+ }
+}

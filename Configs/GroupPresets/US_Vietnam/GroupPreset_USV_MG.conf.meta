@@ -1,0 +1,1 @@
+MetaFileClass { Name "{896F6699342F4497}Configs/GroupPresets/US_Vietnam/GroupPreset_USV_MG.conf" Configurations { CONFResourceClass PC {} CONFResourceClass XBOX_ONE : PC {} CONFResourceClass XBOX_SERIES : PC {} CONFResourceClass PS4 : PC {} CONFResourceClass PS5 : PC {} CONFResourceClass HEADLESS : PC {} } }

@@ -1,0 +1,399 @@
+SCR_CampaignFactionManager : "{A242612865F2A48E}Prefabs/MP/Managers/Factions/FactionManager_Base.et" {
+ ID "56B2B4776E6E4499"
+ Factions {
+  SCR_CampaignFaction "{50B30C3AF4BFD934}" : "{6A14F10000000002}Configs/Factions/USSR_Legacy_Disabled.conf" {
+   m_bIsPlayable 0
+  }
+  SCR_CampaignFaction "{6A14F20000000001}" : "{6A14F10000000001}Configs/Factions/PAVN_Campaign.conf" {
+   m_CallsignInfo SCR_FactionCallsignInfo "{5DA0F2A67DFB8809}" {
+    m_bIsAssignedRandomly 0
+    m_bAssignCallsignBasedOnGroupRole 1
+    m_iCompanyOverflowIndex 8
+   }
+   m_aGroupRolePresetConfigs {
+    SCR_GroupRolePresetConfig "{6176E1354DB9EE26}" : "{6A14D00000000001}Configs/GroupPresets/PAVN/GroupPreset_PAVN_Assault.conf" {
+     m_bIsEnabled 0
+    }
+    SCR_GroupRolePresetConfig "{61B08891604E86B1}" {
+     m_bIsEnabled 0
+     m_aLoadoutResources {
+      "{3413922BA28A9FFD}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Rifleman.et" "{512C17FFD250A7E4}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_MG.et" "{BCF2D51C8FA333C9}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Medic.et" "{1A396BE965138CBA}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_AT.et" "{D319D61C81536A57}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Sharpshooter.et"
+     }
+    }
+    SCR_GroupRolePresetConfig "{61B0889162E62027}" {
+     m_eRequiredRank CORPORAL
+     m_aLoadoutResources {
+      "{3413922BA28A9FFD}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Rifleman.et" "{512C17FFD250A7E4}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_MG.et" "{BCF2D51C8FA333C9}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Medic.et" "{1A396BE965138CBA}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_AT.et" "{D319D61C81536A57}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Sharpshooter.et"
+     }
+    }
+    SCR_GroupRolePresetConfig "{61B0889160C9218A}" {
+     m_bIsEnabled 0
+     m_aLoadoutResources {
+      "{3413922BA28A9FFD}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Rifleman.et" "{512C17FFD250A7E4}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_MG.et" "{BCF2D51C8FA333C9}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Medic.et" "{1A396BE965138CBA}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_AT.et" "{D319D61C81536A57}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Sharpshooter.et"
+     }
+    }
+    SCR_GroupRolePresetConfig "{61B0889161340871}" {
+     m_bIsEnabled 0
+     m_aLoadoutResources {
+      "{3413922BA28A9FFD}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Rifleman.et" "{512C17FFD250A7E4}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_MG.et" "{BCF2D51C8FA333C9}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Medic.et" "{1A396BE965138CBA}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_AT.et" "{D319D61C81536A57}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Sharpshooter.et"
+     }
+    }
+    SCR_GroupRolePresetConfig "{631F062D4EB2C956}" {
+     m_bIsEnabled 0
+     m_eGroupRole RECON
+     m_sGroupFlagName "recon"
+     m_iGroupSize 3
+     m_eRequiredRank PRIVATE
+     m_sGroupRoleName "#AR-GroupRole-Recon"
+     m_aLoadoutResources {
+      "{918C557BF3506286}Prefabs/Characters/Campaign/Final/Campaign_USSR_Base.et" "{3413922BA28A9FFD}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Rifleman.et" "{D319D61C81536A57}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Sharpshooter.et"
+     }
+     m_bCanBeCreatedByPlayer 1
+     m_bCanPlayerJoin 1
+    }
+    SCR_GroupRolePresetConfig "{631EECB195B8DA90}" {
+     m_bIsEnabled 0
+     m_eGroupRole MACHINEGUN
+     m_sGroupFlagName "machinegun"
+     m_iGroupSize 3
+     m_eRequiredRank PRIVATE
+     m_sGroupRoleName "#AR-GroupRole-MachineGun"
+     m_aLoadoutResources {
+      "{918C557BF3506286}Prefabs/Characters/Campaign/Final/Campaign_USSR_Base.et" "{3413922BA28A9FFD}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Rifleman.et" "{512C17FFD250A7E4}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_MG.et"
+     }
+     m_bCanBeCreatedByPlayer 1
+     m_bCanPlayerJoin 1
+    }
+    SCR_GroupRolePresetConfig "{631EECB1EFF9CFB0}" {
+     m_bIsEnabled 0
+     m_eGroupRole ANTITANK
+     m_sGroupFlagName "antiarmor"
+     m_iGroupSize 4
+     m_eRequiredRank PRIVATE
+     m_sGroupRoleName "#AR-GroupRole-AntiTank"
+     m_aLoadoutResources {
+      "{918C557BF3506286}Prefabs/Characters/Campaign/Final/Campaign_USSR_Base.et" "{3413922BA28A9FFD}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Rifleman.et" "{1A396BE965138CBA}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_AT.et"
+     }
+     m_bCanBeCreatedByPlayer 1
+     m_bCanPlayerJoin 1
+    }
+    SCR_GroupRolePresetConfig "{631EECB1D1B29DE3}" {
+     m_bIsEnabled 0
+     m_aLoadoutResources {
+      "{3413922BA28A9FFD}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Rifleman.et" "{512C17FFD250A7E4}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_MG.et" "{BCF2D51C8FA333C9}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Medic.et" "{1A396BE965138CBA}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_AT.et" "{D319D61C81536A57}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Sharpshooter.et"
+     }
+    }
+    SCR_GroupRolePresetConfig "{631EECB11AB76AEC}" {
+     m_bIsEnabled 0
+     m_eGroupRole MEDIC
+     m_sGroupFlagName "medical"
+     m_iGroupSize 2
+     m_eRequiredRank PRIVATE
+     m_sGroupRoleName "#AR-GroupRole-Medic"
+     m_aLoadoutResources {
+      "{918C557BF3506286}Prefabs/Characters/Campaign/Final/Campaign_USSR_Base.et" "{3413922BA28A9FFD}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Rifleman.et" "{BCF2D51C8FA333C9}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Medic.et"
+     }
+     m_bCanBeCreatedByPlayer 1
+     m_bCanPlayerJoin 1
+    }
+    SCR_GroupRolePresetConfig "{65C4E784787FEC22}" {
+     m_bIsEnabled 0
+     m_aLoadoutResources {
+      "{3413922BA28A9FFD}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Rifleman.et" "{512C17FFD250A7E4}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_MG.et" "{BCF2D51C8FA333C9}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Medic.et" "{1A396BE965138CBA}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_AT.et" "{D319D61C81536A57}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Sharpshooter.et"
+     }
+    }
+    SCR_GroupRolePresetConfig "{65C4E784641CFB58}" {
+     m_bIsEnabled 0
+     m_aLoadoutResources {
+      "{3413922BA28A9FFD}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Rifleman.et" "{512C17FFD250A7E4}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_MG.et" "{BCF2D51C8FA333C9}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Medic.et" "{1A396BE965138CBA}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_AT.et" "{D319D61C81536A57}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Sharpshooter.et"
+     }
+    }
+    SCR_GroupRolePresetConfig "{6576F62B0AD17D73}" {
+     m_bIsEnabled 0
+     m_aLoadoutResources {
+      "{3413922BA28A9FFD}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Rifleman.et" "{512C17FFD250A7E4}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_MG.et" "{BCF2D51C8FA333C9}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Medic.et" "{1A396BE965138CBA}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_AT.et" "{D319D61C81536A57}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Sharpshooter.et"
+     }
+    }
+    SCR_GroupRolePresetConfig "{68C882E6F0E1EE90}" {
+     m_bIsEnabled 0
+     m_aLoadoutResources {
+      "{3413922BA28A9FFD}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Rifleman.et" "{512C17FFD250A7E4}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_MG.et" "{BCF2D51C8FA333C9}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Medic.et" "{1A396BE965138CBA}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_AT.et" "{D319D61C81536A57}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Sharpshooter.et"
+     }
+    }
+    SCR_GroupRolePresetConfig "{6A14D30000000001}" : "{6A14D00000000001}Configs/GroupPresets/PAVN/GroupPreset_PAVN_Assault.conf" {
+     m_bIsEnabled 1
+    }
+    SCR_GroupRolePresetConfig "{6A14D30000000002}" {
+     m_bIsEnabled 1
+     m_eGroupRole RECON
+     m_sGroupFlagName "recon"
+     m_iGroupSize 3
+     m_eRequiredRank PRIVATE
+     m_sGroupRoleName "#AR-GroupRole-Recon"
+     m_aLoadoutResources {
+      "{3413922BA28A9FFD}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Rifleman.et" "{D319D61C81536A57}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Sharpshooter.et"
+     }
+     m_bCanBeCreatedByPlayer 1
+     m_bCanPlayerJoin 1
+    }
+    SCR_GroupRolePresetConfig "{6A14D30000000003}" {
+     m_bIsEnabled 1
+     m_eGroupRole MACHINEGUN
+     m_sGroupFlagName "machinegun"
+     m_iGroupSize 3
+     m_eRequiredRank PRIVATE
+     m_sGroupRoleName "#AR-GroupRole-MachineGun"
+     m_aLoadoutResources {
+      "{3413922BA28A9FFD}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Rifleman.et" "{512C17FFD250A7E4}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_MG.et"
+     }
+     m_bCanBeCreatedByPlayer 1
+     m_bCanPlayerJoin 1
+    }
+    SCR_GroupRolePresetConfig "{6A14D30000000004}" {
+     m_bIsEnabled 1
+     m_eGroupRole ANTITANK
+     m_sGroupFlagName "antiarmor"
+     m_iGroupSize 4
+     m_eRequiredRank PRIVATE
+     m_sGroupRoleName "#AR-GroupRole-AntiTank"
+     m_aLoadoutResources {
+      "{3413922BA28A9FFD}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Rifleman.et" "{1A396BE965138CBA}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_AT.et"
+     }
+     m_bCanBeCreatedByPlayer 1
+     m_bCanPlayerJoin 1
+    }
+    SCR_GroupRolePresetConfig "{6A14D30000000005}" {
+     m_bIsEnabled 1
+     m_eGroupRole MEDIC
+     m_sGroupFlagName "medical"
+     m_iGroupSize 2
+     m_eRequiredRank PRIVATE
+     m_sGroupRoleName "#AR-GroupRole-Medic"
+     m_aLoadoutResources {
+      "{3413922BA28A9FFD}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Rifleman.et" "{BCF2D51C8FA333C9}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Medic.et"
+     }
+     m_bCanBeCreatedByPlayer 1
+     m_bCanPlayerJoin 1
+    }
+   }
+   m_aPredefinedGroups {
+    SCR_GroupPreset "{6576F62B7055FA8E}" {
+     m_bIsEnabled 1
+     m_eGroupRole COMMANDER
+    }
+    SCR_GroupPreset "{6A14D20000000001}" {
+     m_bIsEnabled 1
+     m_sGroupName "PAVN 1 (Assault)"
+     m_eGroupRole ASSAULT
+     m_iGroupSize 6
+     m_iRadioFrequency 38000
+     m_eRequiredRank PRIVATE
+    }
+    SCR_GroupPreset "{6A14D20000000002}" {
+     m_bIsEnabled 1
+     m_sGroupName "PAVN 2 (Machine Gun)"
+     m_eGroupRole MACHINEGUN
+     m_iGroupSize 3
+     m_iRadioFrequency 38200
+     m_eRequiredRank PRIVATE
+    }
+    SCR_GroupPreset "{6A14D20000000003}" {
+     m_bIsEnabled 1
+     m_sGroupName "PAVN 3 (Anti-Tank)"
+     m_eGroupRole ANTITANK
+     m_iGroupSize 4
+     m_iRadioFrequency 38400
+     m_eRequiredRank PRIVATE
+    }
+    SCR_GroupPreset "{6A14D20000000004}" {
+     m_bIsEnabled 1
+     m_sGroupName "PAVN 4 (Medic)"
+     m_eGroupRole MEDIC
+     m_iGroupSize 2
+     m_iRadioFrequency 38600
+     m_eRequiredRank PRIVATE
+    }
+    SCR_GroupPreset "{6A14D20000000005}" {
+     m_bIsEnabled 1
+     m_sGroupName "PAVN 5 (Recon)"
+     m_eGroupRole RECON
+     m_iGroupSize 3
+     m_iRadioFrequency 38800
+     m_eRequiredRank PRIVATE
+    }
+   }
+   m_bCreateOnlyPredefinedGroups 1
+   m_bEnableAutoGroupCreationWhenFull 0
+   m_aEntityCatalogs {
+    SCR_EntityCatalogMultiList "{5C68A0E9BD5E5DD9}" {
+     m_aEntityEntryList {
+      SCR_EntityCatalogEntry "{6A14A6E6D26FD956}" {
+       m_sEntityPrefab "{3413922BA28A9FFD}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Rifleman.et"
+       m_aEntityDataList {
+        SCR_EntityCatalogLoadoutData "{6A14B00000000001}" {
+         m_fSpawnSupplyCost 0
+         m_eRequiredRank PRIVATE
+        }
+       }
+      }
+      SCR_EntityCatalogEntry "{6A14A6E6D26FD957}" {
+       m_sEntityPrefab "{1A396BE965138CBA}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_AT.et"
+       m_aEntityDataList {
+        SCR_EntityCatalogLoadoutData "{6A14B00000000002}" {
+         m_fSpawnSupplyCost 0
+         m_eRequiredRank PRIVATE
+        }
+       }
+      }
+      SCR_EntityCatalogEntry "{6A14A6E6D26FD958}" {
+       m_sEntityPrefab "{BCF2D51C8FA333C9}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Medic.et"
+       m_aEntityDataList {
+        SCR_EntityCatalogLoadoutData "{6A14B00000000003}" {
+         m_fSpawnSupplyCost 0
+         m_eRequiredRank PRIVATE
+        }
+       }
+      }
+      SCR_EntityCatalogEntry "{6A14A6E6D26FD959}" {
+       m_sEntityPrefab "{512C17FFD250A7E4}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_MG.et"
+       m_aEntityDataList {
+        SCR_EntityCatalogLoadoutData "{6A14B00000000004}" {
+         m_fSpawnSupplyCost 0
+         m_eRequiredRank PRIVATE
+        }
+       }
+      }
+      SCR_EntityCatalogEntry "{6A14A6E6D26FD95A}" {
+       m_sEntityPrefab "{D319D61C81536A57}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Sharpshooter.et"
+       m_aEntityDataList {
+        SCR_EntityCatalogLoadoutData "{6A14B00000000005}" {
+         m_fSpawnSupplyCost 0
+         m_eRequiredRank PRIVATE
+        }
+       }
+      }
+     }
+    }
+    SCR_EntityCatalogMultiList "{5C9E82F285C09E24}" : "{09C2ED5F617A0390}Configs/EntityCatalog/USSR/Vehicles_EntityCatalog_USSR.conf" {
+    }
+    SCR_EntityCatalogMultiList "{5C68A0E9AFE1E631}" : "{C53421647C3D0D2E}Configs/EntityCatalog/USSR/InventoryItems_EntityCatalog_USSR.conf" {
+    }
+   }
+   m_sFactionBackground "{21533F2089005056}UI/Textures/DeployMenu/Loadout-BG/Loadout_BG_USSR.imageset"
+   m_MobileHQPrefab "{E171C9F443958371}Prefabs/MP/Campaign/Assets/CampaignMobileAssemblyEast.et"
+   m_RadioPrefab "{E1A5D4B878AA8980}Prefabs/Items/Equipment/Radios/Radio_R148.et"
+   m_BaseBuildingHQ "{D70BF977E6D6300C}PrefabsEditable/Auto/Compositions/Slotted/SlotFlatSmall/E_Headquarters_S_Conflict_USSR_01.et"
+   m_sBaseBuildingSourceBase "{C42E98A6F37D15E1}PrefabsEditable/Auto/Compositions/Slotted/SlotFlatSmall/E_SourceBase_S_USSR_01.et"
+  }
+  SCR_CampaignFaction "{50B30C3ADB052C80}" : "{ADFDBDA163950168}Configs/Factions/US_Campaign.conf" {
+   m_CallsignInfo SCR_FactionCallsignInfo "{5DA0F2A6677ADA9E}" {
+    m_bAssignCallsignBasedOnGroupRole 1
+    m_iCompanyOverflowIndex 8
+   }
+   m_aEntityCatalogs {
+    SCR_EntityCatalogMultiList "{5C68A0EE815FA292}" {
+     m_aEntityEntryList {
+      SCR_EntityCatalogEntry "{6A14E40000000001}" {
+       m_sEntityPrefab "{6A14E10000000001}Prefabs/Characters/Campaign/US_Vietnam/Campaign_US_Vietnam_Rifleman.et"
+       m_aEntityDataList {
+        SCR_EntityCatalogLoadoutData "{6A14E50000000001}" {
+         m_fSpawnSupplyCost 0
+         m_eRequiredRank PRIVATE
+        }
+       }
+      }
+      SCR_EntityCatalogEntry "{6A14E40000000002}" {
+       m_sEntityPrefab "{6A14E10000000002}Prefabs/Characters/Campaign/US_Vietnam/Campaign_US_Vietnam_AT.et"
+       m_aEntityDataList {
+        SCR_EntityCatalogLoadoutData "{6A14E50000000002}" {
+         m_fSpawnSupplyCost 0
+         m_eRequiredRank PRIVATE
+        }
+       }
+      }
+      SCR_EntityCatalogEntry "{6A14E40000000003}" {
+       m_sEntityPrefab "{6A14E10000000003}Prefabs/Characters/Campaign/US_Vietnam/Campaign_US_Vietnam_Medic.et"
+       m_aEntityDataList {
+        SCR_EntityCatalogLoadoutData "{6A14E50000000003}" {
+         m_fSpawnSupplyCost 0
+         m_eRequiredRank PRIVATE
+        }
+       }
+      }
+      SCR_EntityCatalogEntry "{6A14E40000000004}" {
+       m_sEntityPrefab "{6A14E10000000004}Prefabs/Characters/Campaign/US_Vietnam/Campaign_US_Vietnam_MG.et"
+       m_aEntityDataList {
+        SCR_EntityCatalogLoadoutData "{6A14E50000000004}" {
+         m_fSpawnSupplyCost 0
+         m_eRequiredRank PRIVATE
+        }
+       }
+      }
+      SCR_EntityCatalogEntry "{6A14E40000000005}" {
+       m_sEntityPrefab "{6A14E10000000005}Prefabs/Characters/Campaign/US_Vietnam/Campaign_US_Vietnam_Sharpshooter.et"
+       m_aEntityDataList {
+        SCR_EntityCatalogLoadoutData "{6A14E50000000005}" {
+         m_fSpawnSupplyCost 0
+         m_eRequiredRank PRIVATE
+        }
+       }
+      }
+     }
+    }
+    SCR_EntityCatalogMultiList "{5C9E82F29B327997}" : "{D83A5EFEEF6CBF61}Configs/EntityCatalog/US/Vehicles_EntityCatalog_US.conf" {
+    }
+    SCR_EntityCatalogMultiList "{5C68A0EEB3F124F9}" : "{5F7EC52FC40A03E2}Configs/EntityCatalog/US/InventoryItems_EntityCatalog_US.conf" {
+    }
+   }
+   m_sFactionBackground "{F8AC305446D5D480}UI/Textures/DeployMenu/Loadout-BG/Loadout_US_BG.imageset"
+   m_aStartingVehicles {
+   }
+  }
+  SCR_CampaignFaction "{56F0C3A6336375DC}" : "{CF9447B87AB774DB}Configs/Factions/FIA_Campaign.conf" {
+   FactionColor 0 0.5 0.125 1
+   m_aFriendlyFactionsIds {
+   }
+   m_aEntityCatalogs {
+    SCR_EntityCatalogMultiList "{6912958B982DC8CA}" {
+     m_aEntityEntryList {
+      SCR_EntityCatalogEntry "{688E75C2D9F330D4}" {
+       m_sEntityPrefab "{75FC25863194612A}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_AMG.et"
+      }
+      SCR_EntityCatalogEntry "{688E75C9E9419BC1}" {
+       m_sEntityPrefab "{D25BC9815A9F9E8D}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_AT.et"
+      }
+      SCR_EntityCatalogEntry "{688E75C910C62512}" {
+       m_sEntityPrefab "{58E47E5A4D599432}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_MG.et"
+      }
+      SCR_EntityCatalogEntry "{6A16DA54D8609E95}" {
+       m_sEntityPrefab "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
+      }
+      SCR_EntityCatalogEntry "{6A16DA54C668CF86}" {
+       m_sEntityPrefab "{677B515F119222C2}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_SL.et"
+      }
+     }
+    }
+    SCR_EntityCatalogMultiList "{6912958B0281068F}" {
+     m_aEntityEntryList {
+      SCR_EntityCatalogEntry "{5C54F92C5A81DFA5}" {
+       m_sEntityPrefab "{CE41AF625D05D0F0}Prefabs/Groups/INDFOR/Group_FIA_RifleSquad.et"
+       m_aEntityDataList {
+        SCR_EntityCatalogAmbientPatrolData "{6A1702584BC7A12D}" {
+         m_eGroupType SQUAD_RIFLE
+         m_fProbabilityOfPresence 1
+        }
+       }
+      }
+     }
+    }
+   }
+   m_sFactionBackground "{81BF3B1DCC106577}UI/Textures/DeployMenu/Loadout-BG/Loadout_BG_FIA.imageset"
+   m_sBaseBuildingSourceBase "{4F9FE516AEBE56E4}PrefabsEditable/Auto/Compositions/Slotted/SlotFlatSmall/E_SourceBase_S_FIA_01.et"
+  }
+  SCR_Faction "{60DCF47AEF40BD72}" : "{3FA20B01D950D31F}Configs/Factions/CIV.conf" {
+  }
+  SCR_CampaignFaction "{68F2E5C05A1440DC}" : "{4F4E0DD03A3C3E3D}Configs/Factions/RNGD_Campaign.conf" {
+  }
+ }
+ m_bCanChangeFactionsPlayable 0
+}

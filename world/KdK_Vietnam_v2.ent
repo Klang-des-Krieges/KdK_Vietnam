@@ -1,0 +1,3 @@
+SubScene {
+ Parent "{11C1B24AF2F72AD8}worlds/SatMap/SatMap.ent"
+}

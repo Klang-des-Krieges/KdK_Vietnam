@@ -1,0 +1,50 @@
+SCR_ChimeraCharacter : "{DE3786C0C6C978D4}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_BaseLoadout.et" {
+ ID "520EC961A090B1EE"
+ components {
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{995B334262EDDA95}Prefabs/Weapons/Rifles/AKM/BC_Rifle_AKM.et"
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{E57E9112CCFCE007}Prefabs/Characters/HeadGear/Hat_NonLa/Hat_NonLa.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{DDAC6287586D16BC}Prefabs/Characters/Uniforms/Jacket_PAVN/variants/Jacket_PAVN_Type59.et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+     AutoTransform 0
+     Enabled 0
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{C0F78AAD7B9B07D9}Prefabs/Characters/Uniforms/Pants_VPN/Pants_VPN.et"
+    }
+    LoadoutSlotInfo Boots {
+     Prefab "{5FD4B8888736063A}Prefabs/Characters/Footwear/Sandals.et"
+    }
+    LoadoutSlotInfo Back {
+     Prefab "{59A446ABA23114D0}Prefabs/Items/Equipment/Backpacks/Backpack_Basket/Backpack_Basket_Sapper.et"
+    }
+    LoadoutSlotInfo Vest {
+     Prefab "{2E7F73436CF58D7D}Prefabs/Characters/Vests/Vest_PAVN_Belt/Vest_PAVN_Guerrilla.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{5D7CC173FAA7C00E}" {
+     TargetStorage "Jacket/Jacket_PAVN_Type59.et"
+    }
+    ItemsInitConfigurationItem "{5D7CC173FAA7C00C}" {
+     TargetStorage "Pants/Pants_VPN.et"
+    }
+    ItemsInitConfigurationItem "{557090178309B42D}" {
+     TargetStorage "Back/Backpack_Basket_Sapper.et"
+    }
+    ItemsInitConfigurationItem "{557090178344BD59}" {
+     TargetStorage "Back/Backpack_Basket_Sapper.et"
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,1 @@
+MetaFileClass { Name "{FE2A1078F3844DE2}Configs/GroupPresets/US/GroupPreset_US_MachineGun.conf" Configurations { CONFResourceClass PC {} CONFResourceClass XBOX_ONE : PC {} CONFResourceClass XBOX_SERIES : PC {} CONFResourceClass PS4 : PC {} CONFResourceClass PS5 : PC {} CONFResourceClass HEADLESS : PC {} } }

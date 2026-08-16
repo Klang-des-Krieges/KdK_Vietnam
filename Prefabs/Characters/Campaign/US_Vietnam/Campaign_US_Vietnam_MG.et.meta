@@ -1,0 +1,4 @@
+MetaFileClass {
+ Name "{6A14E10000000004}Prefabs/Characters/Campaign/US_Vietnam/Campaign_US_Vietnam_MG.et"
+ Configurations { EntityTemplateResourceClass PC {} EntityTemplateResourceClass XBOX_ONE : PC {} EntityTemplateResourceClass XBOX_SERIES : PC {} EntityTemplateResourceClass PS4 : PC {} EntityTemplateResourceClass PS5 : PC {} EntityTemplateResourceClass HEADLESS : PC {} }
+}

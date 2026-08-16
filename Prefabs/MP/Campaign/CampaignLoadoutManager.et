@@ -1,0 +1,45 @@
+SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutManager_Base.et" {
+ ID "56B2B47708C4F23A"
+ m_aPlayerLoadouts {
+  SCR_FactionPlayerLoadout "{6A14E30000000001}" : "{6A14E20000000002}Configs/Loadouts/US_Vietnam/Loadout_US_Vietnam_Rifleman.conf" {
+  }
+  SCR_FactionPlayerLoadout "{6A14E30000000002}" : "{6A14E20000000003}Configs/Loadouts/US_Vietnam/Loadout_US_Vietnam_AT.conf" {
+  }
+  SCR_FactionPlayerLoadout "{6A14E30000000003}" : "{6A14E20000000004}Configs/Loadouts/US_Vietnam/Loadout_US_Vietnam_Medic.conf" {
+  }
+  SCR_FactionPlayerLoadout "{6A14E30000000004}" : "{6A14E20000000005}Configs/Loadouts/US_Vietnam/Loadout_US_Vietnam_MG.conf" {
+  }
+  SCR_FactionPlayerLoadout "{6A14E30000000005}" : "{6A14E20000000006}Configs/Loadouts/US_Vietnam/Loadout_US_Vietnam_Sharpshooter.conf" {
+  }
+  SCR_FactionPlayerLoadout "{6A14D30000000001}" : "{6A14D10000000002}Configs/Loadouts/PAVN/Loadout_PAVN_Rifleman.conf" {
+  }
+  SCR_FactionPlayerLoadout "{6A14D30000000002}" : "{6A14D10000000003}Configs/Loadouts/PAVN/Loadout_PAVN_AT.conf" {
+  }
+  SCR_FactionPlayerLoadout "{6A14D30000000003}" : "{6A14D10000000004}Configs/Loadouts/PAVN/Loadout_PAVN_Medic.conf" {
+  }
+  SCR_FactionPlayerLoadout "{6A14D30000000004}" : "{6A14D10000000005}Configs/Loadouts/PAVN/Loadout_PAVN_MG.conf" {
+  }
+  SCR_FactionPlayerLoadout "{6A14D30000000005}" : "{6A14D10000000006}Configs/Loadouts/PAVN/Loadout_PAVN_Sharpshooter.conf" {
+  }
+  SCR_PlayerArsenalLoadout "{6A14E40000000001}" {
+   m_sLoadoutName "#AR-Loadout_Editor_SavedArsenalLoadout_Name"
+   m_sLoadoutResource "{6A14E10000000001}Prefabs/Characters/Campaign/US_Vietnam/Campaign_US_Vietnam_Rifleman.et"
+   m_sAffiliatedFaction "US"
+  }
+  SCR_PlayerArsenalLoadout "{6A14D40000000001}" {
+   m_sLoadoutName "#AR-Loadout_Editor_SavedArsenalLoadout_Name"
+   m_sLoadoutResource "{3413922BA28A9FFD}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Rifleman.et"
+   m_sAffiliatedFaction "USSR"
+  }
+  SCR_FactionPlayerLoadout "{6A14920291D4D7B1}" {
+   m_sLoadoutName "#AR-Role_Rifleman"
+   m_sLoadoutResource "{B40BFA1A43973320}Prefabs/Characters/Campaign/Final/INDFOR/FIA/Campaign_FIA_Player.et"
+   m_sAffiliatedFaction "FIA"
+  }
+  SCR_FactionPlayerLoadout "{6A14920291D4D7B2}" {
+   m_sLoadoutName "#AR-Role_Rifleman"
+   m_sLoadoutResource "{B920961E143649E6}Prefabs/Characters/Campaign/Final/RNGD/Campaign_RNGD_Player.et"
+   m_sAffiliatedFaction "RNGD"
+  }
+ }
+}

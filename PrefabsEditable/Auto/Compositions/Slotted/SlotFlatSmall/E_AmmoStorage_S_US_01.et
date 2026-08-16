@@ -1,0 +1,31 @@
+GenericEntity : "{7C367E9261376345}Prefabs/Compositions/Slotted/SlotFlatSmall/AmmoStorage_S_US_01.et" {
+ ID "5282DCB5DFC8538F"
+ {
+  GenericEntity {
+   ID "5D06E957D858060A"
+   {
+    GenericEntity {
+     ID "5D371ACBE97B9E1F"
+     components {
+      SCR_ArsenalComponent "{56F2C6D1431AD9AF}" {
+       m_eArsenalSaveType IN_ARSENAL_ITEMS_ONLY
+      }
+     }
+    }
+   }
+  }
+  GenericEntity {
+   ID "5D06E957D85806FB"
+   {
+    GenericEntity {
+     ID "5D371ACBFA947460"
+     components {
+      SCR_ArsenalComponent "{56F2C6D1431AD9AF}" {
+       m_eArsenalSaveType IN_ARSENAL_ITEMS_ONLY
+      }
+     }
+    }
+   }
+  }
+ }
+}

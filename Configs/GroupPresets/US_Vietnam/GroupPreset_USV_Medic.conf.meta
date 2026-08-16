@@ -1,0 +1,1 @@
+MetaFileClass { Name "{519D4E43BAB741A0}Configs/GroupPresets/US_Vietnam/GroupPreset_USV_Medic.conf" Configurations { CONFResourceClass PC {} CONFResourceClass XBOX_ONE : PC {} CONFResourceClass XBOX_SERIES : PC {} CONFResourceClass PS4 : PC {} CONFResourceClass PS5 : PC {} CONFResourceClass HEADLESS : PC {} } }

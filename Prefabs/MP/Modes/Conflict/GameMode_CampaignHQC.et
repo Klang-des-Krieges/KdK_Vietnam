@@ -1,0 +1,41 @@
+SCR_GameModeCampaign : "{3B230AAC5252108F}Prefabs/MP/Modes/Conflict/GameMode_Campaign.et" {
+ ID "56B2B479C6B96951"
+ components {
+  SCR_DebriefingScreenComponent "{5D349E302A88E42C}" {
+   m_BaseLayout SCR_DebriefingScreenUnevenFourTiles "{5D349E3023E18896}" {
+    m_TopLeftTile SCR_DebriefingScreenBigImageContent "{5D349E30244A4792}" {
+     m_sContentImage "{A9F32CB2359EE722}images/KdK_Vietnam2.edds"
+    }
+   }
+  }
+  SCR_GameModeHealthSettings "{5A22E11F9ACBB1DF}" {
+   m_fDOTScale 0.5
+  }
+  SCR_NotificationSenderComponent "{56FA84B04BE7D4C0}" {
+   m_iKillFeedType FULL
+  }
+  SCR_PerceivedFactionManagerComponent "{61AA7E6E0C6A76F9}" {
+   m_eCharacterPerceivedFactionOutfitType DISABLED
+   m_ePunishmentKillingWhileDisguised 0
+  }
+  SCR_TimeAndWeatherHandlerComponent "{5CC49B5A1313B84E}" {
+   m_bRandomStartingWeather 0
+   m_bUsePredefineStartingTimeAndWeather 1
+   m_aStartingWeatherAndTime {
+    SCR_TimeAndWeatherState "{6A18FB1E28FE790C}" {
+     m_sWeatherPresetName "Clear"
+     m_iStartingHour 6
+    }
+   }
+   m_bAllowHeaderSettings 0
+   m_bWindOverride 1
+   m_fWindSpeed 0.82
+   m_fWindDirection 0.082
+   m_bDateOverride 1
+   m_iDay 24
+   m_iMonth 7
+   m_iYear 1967
+  }
+ }
+ m_iControlPointsThreshold 6
+}

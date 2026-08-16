@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{6A14F10000000002}Configs/Factions/USSR_Legacy_Disabled.conf"
+ Configurations {
+  ResourceClass PC {
+  }
+  ResourceClass XBOX_ONE : PC {
+  }
+  ResourceClass XBOX_SERIES : PC {
+  }
+  ResourceClass PS4 : PC {
+  }
+  ResourceClass PS5 : PC {
+  }
+  ResourceClass HEADLESS : PC {
+  }
+ }
+}

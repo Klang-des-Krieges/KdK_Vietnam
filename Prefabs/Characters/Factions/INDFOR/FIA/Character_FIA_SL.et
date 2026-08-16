@@ -1,0 +1,49 @@
+SCR_ChimeraCharacter : "{DE3786C0C6C978D4}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_BaseLoadout.et" {
+ ID "520EC961A090B1EE"
+ components {
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{995B334262EDDA95}Prefabs/Weapons/Rifles/AKM/BC_Rifle_AKM.et"
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{ED0032365BA04F5C}Prefabs/Characters/HeadGear/Hat_Patrol_KR/Hat_Patrol_KR.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{3CD113DBED1EB92E}Prefabs/Characters/Uniforms/Jacket_PAVN/variants/Jacket_PAVN_K65_Rolled_Black.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{24727FF5A6D5FDE3}Prefabs/Characters/Uniforms/Pants_PAVN/variants/Pants_PAVN_K65_Rolled_Black.et"
+    }
+    LoadoutSlotInfo Boots {
+     Prefab "{5FD4B8888736063A}Prefabs/Characters/Footwear/Sandals.et"
+    }
+    LoadoutSlotInfo Vest {
+     Prefab "{84EE30FD2375D50B}Prefabs/Characters/Vests/Vest_PAVN_Belt/Vest_PAVN_RPD.et"
+    }
+    LoadoutSlotInfo HandWear {
+     Prefab "{5BD9D1104C52FDFD}Prefabs/Characters/Handwear/Gloves_IJA/Gloves_IJA.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{5D7CC173FAA7C00E}" {
+     TargetStorage "Jacket/Jacket_PAVN_K65_Rolled_Black.et"
+    }
+    ItemsInitConfigurationItem "{5D7CC173FAA7C00C}" {
+     TargetStorage "Jacket/Jacket_PAVN_K65_Rolled_Black.et"
+    }
+    ItemsInitConfigurationItem "{5A24CC1119A46C9F}" {
+     TargetStorage "Jacket/Jacket_PAVN_K65_Rolled_Black.et"
+    }
+    ItemsInitConfigurationItem "{55709010DB9665F5}" {
+     TargetStorage "Vest/Vest_PAVN_RPD.et"
+     PrefabsToSpawn {
+      "{D66B57C62D7D503C}Prefabs/Weapons/Magazines/AK/BC_Magazine_762x39_AK_30rnd_Last_5Tracer.et" "{D66B57C62D7D503C}Prefabs/Weapons/Magazines/AK/BC_Magazine_762x39_AK_30rnd_Last_5Tracer.et" "{D66B57C62D7D503C}Prefabs/Weapons/Magazines/AK/BC_Magazine_762x39_AK_30rnd_Last_5Tracer.et" "{D66B57C62D7D503C}Prefabs/Weapons/Magazines/AK/BC_Magazine_762x39_AK_30rnd_Last_5Tracer.et" "{77EAE5E07DC4678A}Prefabs/Weapons/Grenades/Smoke_RDG2.et"
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,43 @@
+SCR_ChimeraCharacter : "{DE3786C0C6C978D4}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_BaseLoadout.et" {
+ ID "520EC961A090B1EE"
+ components {
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{995B334262EDDA95}Prefabs/Weapons/Rifles/AKM/BC_Rifle_AKM.et"
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{FCFF08C7C6B05195}Prefabs/Characters/HeadGear/Hat_Headband/Hat_Headband.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{BB1AD6A4BBE6BFB3}Prefabs/Characters/Uniforms/Jacket_PAVN/variants/Jacket_PAVN_Type59_Rolled.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{24727FF5A6D5FDE3}Prefabs/Characters/Uniforms/Pants_PAVN/variants/Pants_PAVN_K65_Rolled_Black.et"
+    }
+    LoadoutSlotInfo Boots {
+     Prefab "{5FD4B8888736063A}Prefabs/Characters/Footwear/Sandals.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{5D7CC173FAA7C00E}" {
+     TargetStorage "Jacket/Jacket_PAVN_Type59_Rolled.et"
+    }
+    ItemsInitConfigurationItem "{5D7CC173FAA7C00C}" {
+     TargetStorage "Jacket/Jacket_PAVN_Type59_Rolled.et"
+    }
+    ItemsInitConfigurationItem "{557090130BCD36B7}" {
+     TargetStorage "Pants/Pants_PAVN_K65_Rolled_Black.et"
+     PrefabsToSpawn {
+      "{D66B57C62D7D503C}Prefabs/Weapons/Magazines/AK/BC_Magazine_762x39_AK_30rnd_Last_5Tracer.et" "{D66B57C62D7D503C}Prefabs/Weapons/Magazines/AK/BC_Magazine_762x39_AK_30rnd_Last_5Tracer.et" "{D66B57C62D7D503C}Prefabs/Weapons/Magazines/AK/BC_Magazine_762x39_AK_30rnd_Last_5Tracer.et" "{77EAE5E07DC4678A}Prefabs/Weapons/Grenades/Smoke_RDG2.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6064820F8177C8C0}" {
+     TargetStorage "Pants/Pants_PAVN_K65_Rolled_Black.et"
+    }
+   }
+  }
+ }
+}

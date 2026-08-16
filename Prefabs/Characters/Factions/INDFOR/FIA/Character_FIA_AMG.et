@@ -1,0 +1,46 @@
+SCR_ChimeraCharacter : "{DE3786C0C6C978D4}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_BaseLoadout.et" {
+ ID "520EC961A090B1EE"
+ components {
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{995B334262EDDA95}Prefabs/Weapons/Rifles/AKM/BC_Rifle_AKM.et"
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{E57E9112CCFCE007}Prefabs/Characters/HeadGear/Hat_NonLa/Hat_NonLa.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{6D2C4324DD70C3A6}Prefabs/Characters/Uniforms/Guerilla_Tunic/Guerilla_Tunic_Tan.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{D8F79C827A61B5B8}Prefabs/Characters/Uniforms/Guerilla_Pants/Guerilla_Pants_Tan.et"
+    }
+    LoadoutSlotInfo Boots {
+     Prefab "{5FD4B8888736063A}Prefabs/Characters/Footwear/Sandals.et"
+    }
+    LoadoutSlotInfo Back {
+     Enabled 0
+    }
+    LoadoutSlotInfo Vest {
+     Prefab "{2E7F73436CF58D7D}Prefabs/Characters/Vests/Vest_PAVN_Belt/Vest_PAVN_Guerrilla.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{5D7CC173FAA7C00E}" {
+     TargetStorage "Jacket/Guerilla_Tunic_Tan.et"
+    }
+    ItemsInitConfigurationItem "{5D7CC173FAA7C00C}" {
+     TargetStorage "Jacket/Guerilla_Tunic_Tan.et"
+    }
+    ItemsInitConfigurationItem "{5570901146CF1A6B}" {
+     TargetStorage "Vest/Vest_PAVN_Guerrilla.et"
+    }
+    ItemsInitConfigurationItem "{5570901680F8BFE7}" {
+     TargetStorage "Vest/Vest_PAVN_Guerrilla.et"
+    }
+   }
+  }
+ }
+}
