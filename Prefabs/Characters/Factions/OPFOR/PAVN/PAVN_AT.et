@@ -1,6 +1,16 @@
 SCR_ChimeraCharacter : "{6A14D0C0A1B2C3D4}Prefabs/Characters/Campaign/PAVN/Campaign_PAVN_Player.et" {
  ID "200D264F0EEA1A28"
  components {
+  SCR_CharacterInventoryStorageComponent "{520EA1D2DB118DAC}" {
+   components {
+    SCR_EquipmentStorageComponent "{56B49DA9722B635D}" {
+     InitialStorageSlots {
+      SCR_EquipmentStorageSlot BinocularSlot {
+      }
+     }
+    }
+   }
+  }
   MapDescriptorComponent "{6A1492038C26A9C2}" {
    VisibleOnMap 0
    MainType Unit
@@ -77,7 +87,7 @@ SCR_ChimeraCharacter : "{6A14D0C0A1B2C3D4}Prefabs/Characters/Campaign/PAVN/Campa
     ItemsInitConfigurationItem "{5D7CC173E6675BF7}" {
      TargetStorage "Jacket/Jacket_PAVN_Type59_Rolled.et"
      PrefabsToSpawn {
-      "{7CEF68E2BC68CE71}Prefabs/Items/Equipment/Compass/Compass_Adrianov.et" "{F849217AB3BA88BE}Prefabs/Items/Equipment/Maps/Map_Paper_01/PaperMap_01_folded_USSR.et" "{80E75A71C29190DB}Prefabs/Items/Medicine/Tourniquet_01/Tourniquet_USSR_01.et" "{0D9A5DCF89AE7AA9}Prefabs/Items/Medicine/MorphineInjection_01/MorphineInjection_01.et" "{062E2F1D7F6739D6}Prefabs/Items/Equipment/Accessories/ETool_MPL50/ETool_MPL50_FreeRoamBuilding_Gadget.et" "{243948B23D90BECB}Prefabs/Items/Equipment/Binoculars/Binoculars_B8/Binoculars_B8.et" "{6FD6C96121905202}Prefabs/Items/Equipment/Watches/Watch_Vostok.et"
+      "{7CEF68E2BC68CE71}Prefabs/Items/Equipment/Compass/Compass_Adrianov.et" "{F849217AB3BA88BE}Prefabs/Items/Equipment/Maps/Map_Paper_01/PaperMap_01_folded_USSR.et" "{80E75A71C29190DB}Prefabs/Items/Medicine/Tourniquet_01/Tourniquet_USSR_01.et" "{0D9A5DCF89AE7AA9}Prefabs/Items/Medicine/MorphineInjection_01/MorphineInjection_01.et" "{062E2F1D7F6739D6}Prefabs/Items/Equipment/Accessories/ETool_MPL50/ETool_MPL50_FreeRoamBuilding_Gadget.et" "{6FD6C96121905202}Prefabs/Items/Equipment/Watches/Watch_Vostok.et"
      }
     }
     ItemsInitConfigurationItem "{5D7CC173E6675BF5}" {

@@ -1,6 +1,17 @@
 SCR_ChimeraCharacter : "{918C557BF3506286}Prefabs/Characters/Campaign/Final/Campaign_USSR_Base.et" {
  ID "6A14D0C0A1B2C301"
  components {
+  SCR_CharacterInventoryStorageComponent "{520EA1D2DB118DAC}" {
+   components {
+    SCR_EquipmentStorageComponent "{56B49DA9722B635D}" {
+     InitialStorageSlots {
+      SCR_EquipmentStorageSlot BinocularSlot {
+       Prefab "{243948B23D90BECB}Prefabs/Items/Equipment/Binoculars/Binoculars_B8/Binoculars_B8.et"
+      }
+     }
+    }
+   }
+  }
   SCR_CampaignBuildingComponent "{6A14920697F5693D}" {
   }
   SCR_CharacterFactionAffiliationComponent "{520EC9618276DF23}" {
@@ -9,8 +20,6 @@ SCR_ChimeraCharacter : "{918C557BF3506286}Prefabs/Characters/Campaign/Final/Camp
   SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
    m_VariantData SCR_EditableEntityVariantData "{60F6B83ED4C13CC3}" {
     m_bRandomizeDefaultVariant 0
-    m_aVariants {
-    }
    }
   }
  }
