@@ -89,3 +89,73 @@ modded class SCR_AmbientPatrolSystem
 		super.OnCleanup();
 	}
 }
+
+// Ambient patrol groups use a formation around the spawn-point origin. On
+// dense jungle terrain individual formation slots can end up inside rocks even
+// when the spawn-point entity itself is placed on open ground. Correct only
+// freshly spawned members which are not standing on the soldiers navmesh.
+modded class SCR_AmbientPatrolSpawnPointComponent
+{
+	override void SpawnPatrol()
+	{
+		super.SpawnPatrol();
+
+		if (!Replication.IsServer())
+			return;
+
+		// Group creation and agent registration are not guaranteed to finish in
+		// the same frame. The second pass catches slower dedicated-server spawns.
+		GetGame().GetCallqueue().CallLater(KdK_ValidateSpawnedMembers, 300, false);
+		GetGame().GetCallqueue().CallLater(KdK_ValidateSpawnedMembers, 1200, false);
+	}
+
+	protected void KdK_ValidateSpawnedMembers()
+	{
+		if (!Replication.IsServer())
+			return;
+
+		SCR_AIGroup group = GetSpawnedGroup();
+		if (!group)
+			return;
+
+		AIPathfindingComponent pathfinding = AIPathfindingComponent.Cast(
+			group.FindComponent(AIPathfindingComponent));
+		if (!pathfinding)
+			return;
+
+		array<AIAgent> agents = {};
+		group.GetAgents(agents);
+
+		foreach (AIAgent agent : agents)
+		{
+			if (!agent)
+				continue;
+
+			IEntity character = agent.GetControlledEntity();
+			if (!character)
+				continue;
+
+			vector currentPosition = character.GetOrigin();
+			vector correctedPosition;
+			if (!pathfinding.GetClosestPositionOnNavmesh(currentPosition, "8 4 8", correctedPosition))
+				continue;
+
+			float correctionDistance = vector.Distance(currentPosition, correctedPosition);
+			if (correctionDistance < 0.25)
+				continue;
+
+			// Keep the character capsule slightly above the calculated surface so
+			// physics can settle it without clipping it back into geometry.
+			correctedPosition[1] = correctedPosition[1] + 0.15;
+			character.SetOrigin(correctedPosition);
+
+			PrintFormat(
+				"KDK_AMBIENT_SPAWN_SAFETY moved=%1 from=%2 to=%3 distance=%4 spawnpoint=%5",
+				character,
+				currentPosition,
+				correctedPosition,
+				correctionDistance,
+				GetOwner().GetOrigin());
+		}
+	}
+}

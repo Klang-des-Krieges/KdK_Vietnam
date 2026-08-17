@@ -1,0 +1,6 @@
+SCR_AIGroup : "{EACD97CF4A702FAE}Prefabs/Groups/BLUFOR/Group_US_Base.et" {
+ ID "0000000000000001"
+ m_aUnitPrefabSlots {
+  "{6A14E10000000002}Prefabs/Characters/Campaign/US_Vietnam/Campaign_US_Vietnam_AT.et" "{6A14E10000000002}Prefabs/Characters/Campaign/US_Vietnam/Campaign_US_Vietnam_AT.et" "{6A14E10000000002}Prefabs/Characters/Campaign/US_Vietnam/Campaign_US_Vietnam_AT.et" "{6A14E10000000002}Prefabs/Characters/Campaign/US_Vietnam/Campaign_US_Vietnam_AT.et"
+ }
+}

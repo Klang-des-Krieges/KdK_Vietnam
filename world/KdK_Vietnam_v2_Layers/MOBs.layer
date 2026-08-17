@@ -5,7 +5,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
     "Encryption key" "chickenNuggets"
     Transceivers {
      RelayTransceiver "{5C669673E8C94083}" {
-      "Transmitting Range" 2000
+      "Transmitting Range" 1500
      }
     }
     m_bIsSource 1
@@ -26,7 +26,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
     "Encryption key" "coldBorscht"
     Transceivers {
      RelayTransceiver "{5C669673E8C94083}" {
-      "Transmitting Range" 2000
+      "Transmitting Range" 1600
      }
     }
     m_bIsSource 1

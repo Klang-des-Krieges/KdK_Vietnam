@@ -1,0 +1,24 @@
+SCR_ChimeraCharacter : "{26A9756790131354}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Rifleman.et" {
+ ID "5232D40E5B169018"
+ components {
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{AA89E7DF69A3CF6C}Prefabs/Weapons/Rifles/ARY_M16_US/Worn/ARY_Rifle_M16A1_Worn.et"
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{6F9B9E3D90702FF3}Prefabs/Characters/Headgear/Helmet_M1/PE_Helmet_M1_Wineleaf_00.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{A3AEF06A1AAC84EB}Prefabs/Characters/Uniforms/Jacket_M65/Base/PE_Jacket_M65_Long_Deploy.et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+     Enabled 0
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{1064E12EE6F25478}Prefabs/Characters/Uniforms/Pants_M65/PE_Pants_M65.et"
+    }
+   }
+  }
+ }
+}

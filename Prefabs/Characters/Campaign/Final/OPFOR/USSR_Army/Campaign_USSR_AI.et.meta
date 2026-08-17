@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{7A40B2D323AC5AC5}Prefabs/Characters/Campaign/Final/OPFOR/USSR_Army/Campaign_USSR_AI.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

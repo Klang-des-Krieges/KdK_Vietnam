@@ -1,0 +1,6 @@
+SCR_AIGroup : "{8DE0C0830FE0C33D}Prefabs/Groups/OPFOR/Group_USSR_Base.et" {
+ ID "64D8A5E45D2023DB"
+ m_aUnitPrefabSlots {
+  "{3413922BA28A9FFD}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_Rifleman.et" "{512C17FFD250A7E4}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_MG.et" "{1A396BE965138CBA}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_AT.et" "{1A396BE965138CBA}Prefabs/Characters/Factions/OPFOR/PAVN/PAVN_AT.et"
+ }
+}

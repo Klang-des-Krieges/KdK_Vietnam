@@ -1,0 +1,44 @@
+SCR_ChimeraCharacter : "{DCB41B3746FDD1BE}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Rifleman.et" {
+ ID "5232D40974FAF121"
+ components {
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{36DAE8FCE186E3F0}Prefabs/Characters/HeadGear/Helmet_SSh40/Helmet_SSh40.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{BB1AD6A4BBE6BFB3}Prefabs/Characters/Uniforms/Jacket_PAVN/variants/Jacket_PAVN_Type59_Rolled.et"
+    }
+    LoadoutSlotInfo ArmoredVest {
+     Enabled 0
+     Prefab "{0F3F09CE205397C6}Prefabs/Characters/Vests/Vest_Sapper/Vest_Sapper.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{D7C3531DD90CA739}Prefabs/Characters/Uniforms/Pants_PAVN/variants/Pants_PAVN_Type59_Rolled.et"
+    }
+    SCR_FeetLoadoutSlotInfo Boots {
+     Prefab "{5FD4B8888736063A}Prefabs/Characters/Footwear/Sandals.et"
+    }
+    LoadoutSlotInfo Back {
+     Prefab "{C96DF4AC3BC6FA34}Prefabs/Items/Equipment/Backpacks/Backpack_FieldPack/variants/Backpack_FieldPack_Assault.et"
+    }
+    LoadoutSlotInfo Vest {
+     Prefab "{0F3F09CE205397C6}Prefabs/Characters/Vests/Vest_Sapper/Vest_Sapper.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{5D7CC173E6675BF7}" {
+     TargetStorage "Jacket/Jacket_PAVN_Type59_Rolled.et"
+    }
+    ItemsInitConfigurationItem "{5D7CC173E6675BF5}" {
+     TargetStorage "Back/Backpack_FieldPack_Assault.et"
+    }
+    ItemsInitConfigurationItem "{54A68D64D7F9124F}" {
+     TargetStorage "Vest/Vest_Sapper.et/PPSh/Vest_PAVN_PPSh.et"
+    }
+   }
+  }
+ }
+}

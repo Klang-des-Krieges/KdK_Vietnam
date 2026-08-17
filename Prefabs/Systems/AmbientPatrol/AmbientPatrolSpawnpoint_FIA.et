@@ -1,0 +1,10 @@
+GenericEntity : "{1E4C8AD00BBB16AA}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_Base.et" {
+ ID "5CCEC603A58CB072"
+ components {
+  SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+   m_eGroupType SQUAD_RIFLE
+   m_iRespawnPeriod 600
+   m_eImportance HIGH
+  }
+ }
+}
