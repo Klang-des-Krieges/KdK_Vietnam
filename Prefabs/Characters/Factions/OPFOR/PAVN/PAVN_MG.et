@@ -61,6 +61,9 @@ SCR_ChimeraCharacter : "{6A14D0C0A1B2C3D4}Prefabs/Characters/Campaign/PAVN/Campa
     LoadoutSlotInfo Boots {
      Prefab "{9956EBEA442C7CF1}Prefabs/Characters/Footwear/Boots_Type65.et"
     }
+    LoadoutSlotInfo Back {
+     Prefab "{E382D2C6B9A3796C}Prefabs/Items/Equipment/Backpacks/Backpack_FieldPack/variants/Backpack_FieldPack_Rifleman.et"
+    }
     LoadoutSlotInfo Vest {
      Prefab "{3DF03365038197C7}Prefabs/Characters/Vests/Vest_PAVN_Belt/variants/Vest_PAVN_MG.et"
     }
@@ -84,7 +87,13 @@ SCR_ChimeraCharacter : "{6A14D0C0A1B2C3D4}Prefabs/Characters/Campaign/PAVN/Campa
     ItemsInitConfigurationItem "{54A68D64D7F9124F}" {
      TargetStorage "Jacket/Jacket_PAVN_K65_Rolled.et"
      PrefabsToSpawn {
-      "{77EAE5E07DC4678A}Prefabs/Weapons/Grenades/Smoke_RDG2.et" "{77EAE5E07DC4678A}Prefabs/Weapons/Grenades/Smoke_RDG2.et" "{E5E9C5897CF47F44}Prefabs/Weapons/Magazines/Box_762x54_PK_100rnd_4Ball_1Tracer.et"
+      "{77EAE5E07DC4678A}Prefabs/Weapons/Grenades/Smoke_RDG2.et" "{77EAE5E07DC4678A}Prefabs/Weapons/Grenades/Smoke_RDG2.et"
+     }
+    }
+    ItemsInitConfigurationItem "{6A26DA2B41B07228}" {
+     TargetStorage "Back/Backpack_FieldPack_Rifleman.et"
+     PrefabsToSpawn {
+      "{E5E9C5897CF47F44}Prefabs/Weapons/Magazines/Box_762x54_PK_100rnd_4Ball_1Tracer.et"
      }
     }
    }

@@ -279,62 +279,22 @@ SCR_CampaignFactionManager : "{A242612865F2A48E}Prefabs/MP/Managers/Factions/Fac
     SCR_EntityCatalogMultiList "{5C68A0E9B9AA3C2D}" {
      m_aEntityEntryList {
       SCR_EntityCatalogEntry "{5C54F92C302CBA1D}" {
-       m_bEnabled 0
+       m_sEntityPrefab "{E552DABF3636C2AD}Prefabs/Groups/OPFOR/Group_USSR_RifleSquad.et"
       }
       SCR_EntityCatalogEntry "{5C54F92C301C701E}" {
-       m_bEnabled 0
+       m_sEntityPrefab "{30ED11AA4F0D41E5}Prefabs/Groups/OPFOR/Group_USSR_FireGroup.et"
       }
       SCR_EntityCatalogEntry "{5C54F92C30F41544}" {
-       m_bEnabled 0
+       m_sEntityPrefab "{A2F75E45C66B1C0A}Prefabs/Groups/OPFOR/Group_USSR_MachineGunTeam.et"
       }
       SCR_EntityCatalogEntry "{5C54F92C308C0F48}" {
-       m_bEnabled 0
+       m_sEntityPrefab "{D815658156080328}Prefabs/Groups/OPFOR/Group_USSR_MedicalSection.et"
       }
       SCR_EntityCatalogEntry "{611EBEAAB4FBA640}" {
-       m_bEnabled 0
+       m_sEntityPrefab "{96BAB56E6558788E}Prefabs/Groups/OPFOR/Group_USSR_Team_AT.et"
       }
       SCR_EntityCatalogEntry "{611EBEAADC00C726}" {
-       m_bEnabled 0
-      }
-      SCR_EntityCatalogEntry "{6A14F30000000001}" {
-       m_sEntityPrefab "{E552DABF3636C2AD}Prefabs/Groups/OPFOR/Group_USSR_RifleSquad.et"
-       m_aEntityDataList { SCR_EntityCatalogEditorData "{6A14F11000000001}" { m_eValidEditorModes 49 } }
-      }
-      SCR_EntityCatalogEntry "{6A14F30000000002}" {
-       m_sEntityPrefab "{30ED11AA4F0D41E5}Prefabs/Groups/OPFOR/Group_USSR_FireGroup.et"
-       m_aEntityDataList { SCR_EntityCatalogEditorData "{6A14F11000000002}" { m_eValidEditorModes 49 } }
-      }
-      SCR_EntityCatalogEntry "{6A14F30000000003}" {
-       m_sEntityPrefab "{A2F75E45C66B1C0A}Prefabs/Groups/OPFOR/Group_USSR_MachineGunTeam.et"
-       m_aEntityDataList { SCR_EntityCatalogEditorData "{6A14F11000000003}" { m_eValidEditorModes 49 } }
-      }
-      SCR_EntityCatalogEntry "{6A14F30000000004}" {
-       m_sEntityPrefab "{D815658156080328}Prefabs/Groups/OPFOR/Group_USSR_MedicalSection.et"
-       m_aEntityDataList { SCR_EntityCatalogEditorData "{6A14F11000000004}" { m_eValidEditorModes 49 } }
-      }
-      SCR_EntityCatalogEntry "{6A14F30000000005}" {
-       m_sEntityPrefab "{344B4B6F787CFB23}Prefabs/Groups/OPFOR/Group_USSR_EngineerTeam.et"
-       m_aEntityDataList { SCR_EntityCatalogEditorData "{6A14F11000000005}" { m_eValidEditorModes 49 } }
-      }
-      SCR_EntityCatalogEntry "{6A14F30000000006}" {
        m_sEntityPrefab "{CB58D90EA14430AD}Prefabs/Groups/OPFOR/Group_USSR_SentryTeam.et"
-       m_aEntityDataList { SCR_EntityCatalogEditorData "{6A14F11000000006}" { m_eValidEditorModes 49 } }
-      }
-      SCR_EntityCatalogEntry "{6A14F30000000007}" {
-       m_sEntityPrefab "{96BAB56E6558788E}Prefabs/Groups/OPFOR/Group_USSR_Team_AT.et"
-       m_aEntityDataList { SCR_EntityCatalogEditorData "{6A14F11000000007}" { m_eValidEditorModes 49 } }
-      }
-      SCR_EntityCatalogEntry "{6A14F30000000008}" {
-       m_sEntityPrefab "{43C7A28EEB660FF8}Prefabs/Groups/OPFOR/Group_USSR_Team_GL.et"
-       m_aEntityDataList { SCR_EntityCatalogEditorData "{6A14F11000000008}" { m_eValidEditorModes 49 } }
-      }
-      SCR_EntityCatalogEntry "{6A14F30000000009}" {
-       m_sEntityPrefab "{2E59ECDA9ED0B993}Prefabs/Groups/OPFOR/Group_USSR_Team_LAT.et"
-       m_aEntityDataList { SCR_EntityCatalogEditorData "{6A14F11000000009}" { m_eValidEditorModes 49 } }
-      }
-      SCR_EntityCatalogEntry "{6A14F3000000000A}" {
-       m_sEntityPrefab "{1C0502B5729E7231}Prefabs/Groups/OPFOR/Group_USSR_Team_Suppress.et"
-       m_aEntityDataList { SCR_EntityCatalogEditorData "{6A14F1100000000A}" { m_eValidEditorModes 49 } }
       }
      }
     }
@@ -410,34 +370,34 @@ SCR_CampaignFactionManager : "{A242612865F2A48E}Prefabs/MP/Managers/Factions/Fac
     SCR_EntityCatalogMultiList "{5C68A0EE8B97CA50}" {
      m_aEntityEntryList {
       SCR_EntityCatalogEntry "{5C54F92C13994FAF}" {
-       m_bEnabled 0
+       m_sEntityPrefab "{DDF3799FA1387848}Prefabs/Groups/BLUFOR/Group_US_RifleSquad.et"
       }
       SCR_EntityCatalogEntry "{5C54F92C1389DCDD}" {
-       m_bEnabled 0
+       m_sEntityPrefab "{84E5BBAB25EA23E5}Prefabs/Groups/BLUFOR/Group_US_FireTeam.et"
       }
       SCR_EntityCatalogEntry "{65DEE29CC8684B30}" {
-       m_bEnabled 0
+       m_sEntityPrefab "{958039B857396B7B}Prefabs/Groups/BLUFOR/Group_US_MachineGunTeam.et"
       }
       SCR_EntityCatalogEntry "{5C54F92C127F0004}" {
-       m_bEnabled 0
+       m_sEntityPrefab "{EF62027CC75A7459}Prefabs/Groups/BLUFOR/Group_US_MedicalSection.et"
       }
       SCR_EntityCatalogEntry "{5C54F92C12486573}" {
-       m_bEnabled 0
+       m_sEntityPrefab "{F65B7BB712F46FEE}Prefabs/Groups/BLUFOR/Group_US_ReconTeam.et"
       }
       SCR_EntityCatalogEntry "{5C54F92C123CDCAB}" {
-       m_bEnabled 0
+       m_sEntityPrefab "{6B2A6EE5002D200F}Prefabs/Groups/BLUFOR/Group_US_EngineerTeam.et"
       }
       SCR_EntityCatalogEntry "{5C54F92C12103EC3}" {
-       m_bEnabled 0
+       m_sEntityPrefab "{3BF36BDEEB33AEC9}Prefabs/Groups/BLUFOR/Group_US_SentryTeam.et"
       }
       SCR_EntityCatalogEntry "{5C54F92C12EF81F1}" {
-       m_bEnabled 0
+       m_sEntityPrefab "{DE747BC9217D383C}Prefabs/Groups/BLUFOR/Group_US_Team_GL.et"
       }
       SCR_EntityCatalogEntry "{5C54F92C112F3EB0}" {
-       m_bEnabled 0
+       m_sEntityPrefab "{FAEA8B9E1252F56E}Prefabs/Groups/BLUFOR/Group_US_Team_LAT.et"
       }
       SCR_EntityCatalogEntry "{611EBEA3C6943C7D}" {
-       m_bEnabled 0
+       m_sEntityPrefab "{81B6DBF2B88545F5}Prefabs/Groups/BLUFOR/Group_US_Team_Suppress.et"
       }
       SCR_EntityCatalogEntry "{611EBEA3C52ED205}" {
        m_bEnabled 0
@@ -468,46 +428,6 @@ SCR_CampaignFactionManager : "{A242612865F2A48E}Prefabs/MP/Managers/Factions/Fac
       }
       SCR_EntityCatalogEntry "{6248E9F73C84AE2B}" {
        m_bEnabled 0
-      }
-      SCR_EntityCatalogEntry "{6A14F40000000001}" {
-       m_sEntityPrefab "{DDF3799FA1387848}Prefabs/Groups/BLUFOR/Group_US_RifleSquad.et"
-       m_aEntityDataList { SCR_EntityCatalogEditorData "{6A14F21000000001}" { m_eValidEditorModes 49 } }
-      }
-      SCR_EntityCatalogEntry "{6A14F40000000002}" {
-       m_sEntityPrefab "{84E5BBAB25EA23E5}Prefabs/Groups/BLUFOR/Group_US_FireTeam.et"
-       m_aEntityDataList { SCR_EntityCatalogEditorData "{6A14F21000000002}" { m_eValidEditorModes 49 } }
-      }
-      SCR_EntityCatalogEntry "{6A14F40000000003}" {
-       m_sEntityPrefab "{958039B857396B7B}Prefabs/Groups/BLUFOR/Group_US_MachineGunTeam.et"
-       m_aEntityDataList { SCR_EntityCatalogEditorData "{6A14F21000000003}" { m_eValidEditorModes 49 } }
-      }
-      SCR_EntityCatalogEntry "{6A14F40000000004}" {
-       m_sEntityPrefab "{EF62027CC75A7459}Prefabs/Groups/BLUFOR/Group_US_MedicalSection.et"
-       m_aEntityDataList { SCR_EntityCatalogEditorData "{6A14F21000000004}" { m_eValidEditorModes 49 } }
-      }
-      SCR_EntityCatalogEntry "{6A14F40000000005}" {
-       m_sEntityPrefab "{F65B7BB712F46FEE}Prefabs/Groups/BLUFOR/Group_US_ReconTeam.et"
-       m_aEntityDataList { SCR_EntityCatalogEditorData "{6A14F21000000005}" { m_eValidEditorModes 49 } }
-      }
-      SCR_EntityCatalogEntry "{6A14F40000000006}" {
-       m_sEntityPrefab "{6B2A6EE5002D200F}Prefabs/Groups/BLUFOR/Group_US_EngineerTeam.et"
-       m_aEntityDataList { SCR_EntityCatalogEditorData "{6A14F21000000006}" { m_eValidEditorModes 49 } }
-      }
-      SCR_EntityCatalogEntry "{6A14F40000000007}" {
-       m_sEntityPrefab "{3BF36BDEEB33AEC9}Prefabs/Groups/BLUFOR/Group_US_SentryTeam.et"
-       m_aEntityDataList { SCR_EntityCatalogEditorData "{6A14F21000000007}" { m_eValidEditorModes 49 } }
-      }
-      SCR_EntityCatalogEntry "{6A14F40000000008}" {
-       m_sEntityPrefab "{DE747BC9217D383C}Prefabs/Groups/BLUFOR/Group_US_Team_GL.et"
-       m_aEntityDataList { SCR_EntityCatalogEditorData "{6A14F21000000008}" { m_eValidEditorModes 49 } }
-      }
-      SCR_EntityCatalogEntry "{6A14F40000000009}" {
-       m_sEntityPrefab "{FAEA8B9E1252F56E}Prefabs/Groups/BLUFOR/Group_US_Team_LAT.et"
-       m_aEntityDataList { SCR_EntityCatalogEditorData "{6A14F21000000009}" { m_eValidEditorModes 49 } }
-      }
-      SCR_EntityCatalogEntry "{6A14F4000000000A}" {
-       m_sEntityPrefab "{81B6DBF2B88545F5}Prefabs/Groups/BLUFOR/Group_US_Team_Suppress.et"
-       m_aEntityDataList { SCR_EntityCatalogEditorData "{6A14F2100000000A}" { m_eValidEditorModes 49 } }
       }
      }
     }
