@@ -1,15 +1,12 @@
 modded class SCR_AmbientPatrolSpawnPointComponent
 {
 	private ref RandomGenerator random = new RandomGenerator();
-	private SCR_AIGroup m_TrackedGoup;
 	
 	override void SetspawnedGroup(SCR_AIGroup group){
 		super.SetspawnedGroup(group);
 		
 		if(!group)
 			return;
-		
-		m_TrackedGoup = group;
 		
 		group.GetOnAgentAdded().Insert(OnPatrolAgentAdded);
 	}
