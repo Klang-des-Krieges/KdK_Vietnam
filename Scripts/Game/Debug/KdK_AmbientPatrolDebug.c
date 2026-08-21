@@ -1,183 +1,77 @@
-// Dedicated-server workaround for SCR_AmbientPatrolSystem.
-//
-// On the affected scenario the native world-system update runs once before a
-// player exists and is not scheduled again after the first player joins. This
-// fallback only restores periodic calls to the vanilla ProcessSpawnpoint method.
-// All vanilla distance, probability, catalog and AI-limit rules remain intact.
-
-modded class SCR_AmbientPatrolSystem
-{
-	protected int m_iKdKNativeUpdateCount;
-	protected int m_iKdKFallbackIndex;
-	protected bool m_bKdKFallbackActive;
-
-	override void OnInit()
-	{
-		super.OnInit();
-		if (Replication.IsServer())
-			GetGame().GetCallqueue().CallLater(KdK_Monitor, 1000, true);
-	}
-
-	protected void KdK_Monitor()
-	{
-		KdK_TryStartFallback();
-	}
-
-	protected void KdK_StopFallback()
-	{
-		if (!m_bKdKFallbackActive)
-			return;
-
-		m_bKdKFallbackActive = false;
-		GetGame().GetCallqueue().Remove(KdK_FallbackTick);
-	}
-
-	protected void KdK_TryStartFallback()
-	{
-		if (!Replication.IsServer() || m_bKdKFallbackActive)
-			return;
-
-		// Current Reforger no longer keeps a player array on this system.
-		// ProcessSpawnpoint queries ObserversSystem itself, so patrol presence is
-		// the only prerequisite needed here.
-		if (m_aPatrols.IsEmpty())
-			return;
-
-		// A healthy native scheduler calls OnUpdatePoint continuously. The broken
-		// dedicated-server path produces no more than its initial startup call.
-		if (m_iKdKNativeUpdateCount > 1)
-			return;
-
-		m_bKdKFallbackActive = true;
-		m_iKdKFallbackIndex = 0;
-		GetGame().GetCallqueue().CallLater(KdK_FallbackTick, 20, true);
-	}
-
-	protected void KdK_FallbackTick()
-	{
-		if (!Replication.IsServer())
-		{
-			KdK_StopFallback();
-			return;
-		}
-
-		if (m_aPatrols.IsEmpty())
-			return;
-
-		if (m_iKdKFallbackIndex >= m_aPatrols.Count())
-			m_iKdKFallbackIndex = 0;
-
-		ProcessSpawnpoint(m_iKdKFallbackIndex);
-		m_iKdKFallbackIndex++;
-	}
-
-	override void OnUpdatePoint(WorldUpdatePointArgs args)
-	{
-		m_iKdKNativeUpdateCount++;
-
-		// Never run the native scheduler and fallback in parallel.
-		if (m_bKdKFallbackActive)
-			KdK_StopFallback();
-
-		super.OnUpdatePoint(args);
-	}
-
-	override void OnCleanup()
-	{
-		GetGame().GetCallqueue().Remove(KdK_Monitor);
-		KdK_StopFallback();
-		super.OnCleanup();
-	}
-}
-
-// Ambient patrol groups use a formation around the spawn-point origin. On
-// dense jungle terrain individual formation slots can end up inside rocks even
-// when the spawn-point entity itself is placed on open ground. Correct only
-// freshly spawned members which are not standing on the soldiers navmesh.
 modded class SCR_AmbientPatrolSpawnPointComponent
 {
-	override void SpawnPatrol()
-	{
-		super.SpawnPatrol();
-
-		if (!Replication.IsServer())
+	private ref RandomGenerator random = new RandomGenerator();
+	private SCR_AIGroup m_TrackedGoup;
+	
+	override void SetspawnedGroup(SCR_AIGroup group){
+		super.SetspawnedGroup(group);
+		
+		if(!group)
 			return;
-
-		// Group creation and agent registration are not guaranteed to finish in
-		// the same frame. The second pass catches slower dedicated-server spawns.
-		GetGame().GetCallqueue().CallLater(KdK_ValidateSpawnedMembers, 300, false);
-		GetGame().GetCallqueue().CallLater(KdK_ValidateSpawnedMembers, 1200, false);
+		
+		m_TrackedGoup = group;
+		
+		group.GetOnAgentAdded().Insert(OnPatrolAgentAdded);
 	}
-
-	protected void KdK_ValidateSpawnedMembers()
+	
+	protected void OnPatrolAgentAdded(AIAgent child){
+		GetGame().GetCallqueue().CallLater(KdK_ValidateSpawnedMembers, 0, false, child);
+	}
+	
+	private TraceParam KdK_RaycastUpFromPlayer(vector currentPosition, BaseWorld world){
+		TraceParam trace = new TraceParam();
+		trace.Start = currentPosition + vector.Up * 2;  //currentPosition is the root of the entity, which is at the bottom so the raycast would hit the entity itself
+		trace.End = currentPosition + vector.Up * 100;
+		trace.Flags = TraceFlags.ENTS;
+		
+		world.TraceMove(trace, null);
+		
+		return trace;
+	}
+	
+	protected void KdK_ValidateSpawnedMembers(AIAgent agent)
 	{
-		if (!Replication.IsServer())
+		if (!agent)
+			return;
+		
+		IEntity character = agent.GetControlledEntity();
+		if (!character)
 			return;
 
-		SCR_AIGroup group = GetSpawnedGroup();
-		if (!group)
+		vector currentPosition = character.GetOrigin();
+		vector correctedPosition;
+		
+		TraceParam trace = KdK_RaycastUpFromPlayer(currentPosition, character.GetWorld());
+		if(!trace.TraceEnt)
 			return;
-
-		AIPathfindingComponent pathfinding = AIPathfindingComponent.Cast(
-			group.FindComponent(AIPathfindingComponent));
-		if (!pathfinding)
-			return;
-
-		array<AIAgent> agents = {};
-		group.GetAgents(agents);
-
-		foreach (AIAgent agent : agents)
-		{
-			if (!agent)
-				continue;
-
-			IEntity character = agent.GetControlledEntity();
-			if (!character)
-				continue;
-
-			vector currentPosition = character.GetOrigin();
-
-			// Navmesh alone is not sufficient on Khanh Trung: parts of the
-			// soldiers navmesh can run below or through decorative rocks. Ask the
-			// engine for terrain space that can contain an entire standing
-			// character cylinder first. Existing group members are included in the
-			// entity trace, so they are distributed into separate free positions.
-			vector emptyPosition;
-			if (!SCR_WorldTools.FindEmptyTerrainPosition(
-				emptyPosition,
-				currentPosition,
-				10.0,
-				0.55,
-				2.0,
-				TraceFlags.ENTS | TraceFlags.OCEAN,
-				GetGame().GetWorld()))
-				continue;
-
-			// The empty terrain point must also be usable by infantry AI. A small
-			// search box prevents relocation to a distant/disconnected navmesh.
-			vector correctedPosition;
-			if (!pathfinding.GetClosestPositionOnNavmesh(emptyPosition, "3 3 3", correctedPosition))
-				continue;
-
-			if (vector.Distance(emptyPosition, correctedPosition) > 1.5)
-				continue;
-
-			float correctionDistance = vector.Distance(currentPosition, correctedPosition);
-			if (correctionDistance < 0.10)
-				continue;
-
-			// Keep the character capsule slightly above the calculated surface so
-			// physics can settle it without clipping it back into geometry.
-			correctedPosition[1] = correctedPosition[1] + 0.15;
-			character.SetOrigin(correctedPosition);
-
-			PrintFormat(
-				"KDK_AMBIENT_SPAWN_SAFETY moved=%1 from=%2 to=%3 distance=%4 spawnpoint=%5",
-				character,
-				currentPosition,
-				correctedPosition,
-				correctionDistance,
-				GetOwner().GetOrigin());
+		
+		int maxTries = 1000;
+		int currentTries = 0;
+			
+		while(currentTries <= maxTries){
+			float newX = random.RandInt(currentPosition[0] - 25, currentPosition[0] + 25);
+			float newZ = random.RandInt(currentPosition[2] - 25, currentPosition[2] + 25);
+			float newY = character.GetWorld().GetSurfaceY(newX, newZ);
+			
+			correctedPosition = Vector(newX, newY, newZ);
+			trace = KdK_RaycastUpFromPlayer(correctedPosition, character.GetWorld());
+			if(!trace.TraceEnt){
+				PrintFormat(
+					"KDK_AMBIENT_SPAWN_SAFETY moved=%1 from=%2 to=%3 tries=%4 distance=%5",
+					character,
+					currentPosition,
+					correctedPosition,
+					currentTries,
+					Math.AbsFloat(vector.Distance(correctedPosition, currentPosition)));
+				
+				
+				character.SetOrigin(correctedPosition);
+				return;
+			}
+			
+			currentTries++;
 		}
+		
+		PrintFormat("KDK_AMBIENT_SPAWN_SAFETY could not move %1 after %2 tries", character, currentTries);
 	}
 }
