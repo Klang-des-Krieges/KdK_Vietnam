@@ -136,12 +136,34 @@ modded class SCR_AmbientPatrolSpawnPointComponent
 				continue;
 
 			vector currentPosition = character.GetOrigin();
+
+			// Navmesh alone is not sufficient on Khanh Trung: parts of the
+			// soldiers navmesh can run below or through decorative rocks. Ask the
+			// engine for terrain space that can contain an entire standing
+			// character cylinder first. Existing group members are included in the
+			// entity trace, so they are distributed into separate free positions.
+			vector emptyPosition;
+			if (!SCR_WorldTools.FindEmptyTerrainPosition(
+				emptyPosition,
+				currentPosition,
+				10.0,
+				0.55,
+				2.0,
+				TraceFlags.ENTS | TraceFlags.OCEAN,
+				GetGame().GetWorld()))
+				continue;
+
+			// The empty terrain point must also be usable by infantry AI. A small
+			// search box prevents relocation to a distant/disconnected navmesh.
 			vector correctedPosition;
-			if (!pathfinding.GetClosestPositionOnNavmesh(currentPosition, "8 4 8", correctedPosition))
+			if (!pathfinding.GetClosestPositionOnNavmesh(emptyPosition, "3 3 3", correctedPosition))
+				continue;
+
+			if (vector.Distance(emptyPosition, correctedPosition) > 1.5)
 				continue;
 
 			float correctionDistance = vector.Distance(currentPosition, correctedPosition);
-			if (correctionDistance < 0.25)
+			if (correctionDistance < 0.10)
 				continue;
 
 			// Keep the character capsule slightly above the calculated surface so
