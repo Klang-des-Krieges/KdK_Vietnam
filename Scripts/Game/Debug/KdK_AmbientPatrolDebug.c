@@ -7,6 +7,9 @@ modded class SCR_AmbientPatrolSpawnPointComponent
 		
 		if(!group)
 			return;
+
+		if (!Replication.IsServer())
+			return;
 		
 		group.GetOnAgentAdded().Insert(OnPatrolAgentAdded);
 	}
